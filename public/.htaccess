@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+# apacheの変数  %{...} -f ファイルの存在確認
+RewriteCond %{REQUEST_FILENAME} !-d
+#                     -d ディレクトリの存在確認
+RewriteRule ^ index.php [QSA,L]
+#RewriteRule 移管元 移管先 [QSA,L]
